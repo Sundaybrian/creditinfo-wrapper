@@ -1,9 +1,21 @@
 # Express API Starter with Typescript
 
+## i dont know what im doing, but doing it anyway
+
 ## require at least one
 
+## testing
+- ``` mkdir credit-test```
+- cd credit-test
+- cp ../creditinfo-sdk/tsconfig.json .
+- mkdir src && touch src/app.ts
+- npm link ../creditinfo-sdk
+
+
+
+
 - [require atleast one](https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist)
-Development utilities:
+  Development utilities:
 
 - [typescript](https://www.npmjs.com/package/typescript)
   - TypeScript is a language for application-scale JavaScript.

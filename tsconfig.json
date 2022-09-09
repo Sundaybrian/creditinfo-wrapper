@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "sourceMap": true,
+    "sourceMap": false,
     "target": "esnext",
     "lib": [
       "dom",
@@ -30,11 +30,13 @@
   },
   "exclude": [
     "node_modules",
+    "test",
+    "lib",
+    "**/*spec.ts"
   ],
   "include": [
-    "./*.js",
-    "src/**/*.ts",
-    "test/**/*.ts",
-    "./src/**/*.tsx", "playground/index.js",
+
+    "src/**/*",
+
   ],
 }

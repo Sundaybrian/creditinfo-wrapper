@@ -13,11 +13,8 @@ pm2:
 redis:
 	sudo service redis-server start	
 send:
-	git push origin stream_meets_child_process
+	git push origin master
 build:
-	cd frontend && yarn run build
+	npm run build
 historia:
-	git pull origin main --allow-unrelated-histories		
-server:
-	yarn run server
-	
+	git pull origin main --allow-unrelated-histories

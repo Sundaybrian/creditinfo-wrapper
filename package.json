@@ -1,5 +1,5 @@
 {
-  "name": "credit-info-sdk",
+  "name": "creditinfo-sdk",
   "version": "1.0.0",
   "description": " A wrapper for the credit info soap service",
   "main": "dist/index.js",
