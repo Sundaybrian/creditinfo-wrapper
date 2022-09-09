@@ -18,3 +18,5 @@ build:
 	npm run build
 historia:
 	git pull origin main --allow-unrelated-histories
+deploy:
+	make build && npm publish --access=public

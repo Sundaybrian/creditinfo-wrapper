@@ -6,6 +6,7 @@ export abstract class Base {
     private username: string;
     private password: string;
     private url: string;
+    // private client: Promise<ICreditInfo>;
 
 
     constructor(config: IConfig) {

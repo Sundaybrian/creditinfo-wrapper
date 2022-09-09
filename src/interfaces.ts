@@ -61,16 +61,18 @@ export type ISearchInidividualInput = {
 
 export type ISearchIndividualResult = {
     SearchIndividualResult: {
-        CreditinfoId?: null | string;
+        CreditinfoId?: null | number;
         IndividualRecords: null | IndividualRecords;
         Parameters: Partial<ISearchIndividual>;
         Status: "SubjectNotFound" | "SubjectFound"
     }
 }
 
+export type ISearchResults = [ISearchIndividualResult, string]
+
 
 type SearchIndividualFn = (payload: Partial<ISearchInidividualInput>) =>
-    Promise<ISearchIndividualResult>
+    Promise<ISearchResults>
 
 
 export class ICreditInfo extends Client {

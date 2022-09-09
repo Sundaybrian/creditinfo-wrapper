@@ -1,14 +1,14 @@
 import { Base } from "./base"
-import { ISearchInidividualInput, ISearchIndividualResult, ICreditInfo } from "./interfaces"
+import { ISearchInidividualInput, ISearchResults, ICreditInfo } from "./interfaces"
 
 
 export class CreditInfoService extends Base {
 
-    async SearchIndividualAsync(param: Partial<ISearchInidividualInput>): Promise<ISearchIndividualResult> {
+    async SearchIndividualAsync(param: Partial<ISearchInidividualInput>): Promise<ISearchResults> {
 
         const client = await this.invoke<ICreditInfo>()
         const results = await client.SearchIndividualAsync(param);
-        return results
+        return results;
 
     }
 
