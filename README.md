@@ -12,7 +12,7 @@ The Unofficial [Credit Info Tanzania](https://creditinfo.co.tz) API wrapper for 
 Install via npm
 
 ```bash
-npm i @debugger/credintinfo
+npm i @debugger_supreme/credintinfo
 ```
 
 ## Configuration
@@ -57,7 +57,7 @@ Remember
 Method `SearchIndividualAsync(params)` queries client information by FullName | PhoneNumber | IdNumber | IdNumberType
 
 ```ts
-import CreditInfo from "@debugger/creditinfo";
+import CreditInfo from "@debugger_supreme/creditinfo";
 
 const client = new CreditInfo({
   username: proces.env.CREDIT_INFO_USERNAME,
