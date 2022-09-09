@@ -1,7 +1,7 @@
 {
-  "name": "express-api-starter-ts",
-  "version": "1.2.0",
-  "description": " A basic starter for an express.js API with Typescript",
+  "name": "credit-info-sdk",
+  "version": "1.0.0",
+  "description": " A wrapper for the credit info soap service",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
   "package": "dist/index.umd.js",
@@ -16,9 +16,12 @@
   "author": "Sunday Brian (https://github.com/Sundaybrian)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/Sundaybrian/creditinfo-wrapper"
   },
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "soap": "^0.45.0"
   },

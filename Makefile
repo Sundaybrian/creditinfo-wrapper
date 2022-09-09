@@ -20,3 +20,4 @@ historia:
 	git pull origin main --allow-unrelated-histories		
 server:
 	yarn run server
+	
