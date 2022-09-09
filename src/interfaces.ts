@@ -6,13 +6,13 @@ export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> =
         [K in Keys]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<Keys, K>>>
     }[Keys]
 
-type $decisionWorkflow = "NMB.TZA.Base"
+// type $decisionWorkflow = "NMB.TZA.Base"
 
 export type IConfig = {
     username: string;
     password: string;
-    endpoint: string;
-    decisionworkflow?: $decisionWorkflow;
+    endpoint?: string;
+    // decisionworkflow?: $decisionWorkflow;
 
 
 }

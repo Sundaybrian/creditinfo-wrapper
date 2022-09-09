@@ -11,7 +11,7 @@ export abstract class Base {
 
     constructor(config: IConfig) {
 
-        this.url = config.endpoint ?? "https://wstest.creditinfo.co.tz/WsReport/v5.39/service.svc?singleWSDL";
+        this.url = config.endpoint ?? "https://ws.creditinfo.co.tz/WsReport/v5.39/service.svc?singleWSDL";
         this.username = config.username;
         this.password = config.password;
 
