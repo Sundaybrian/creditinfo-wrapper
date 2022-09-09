@@ -26,7 +26,7 @@ export abstract class Base {
 
         return soap.createClientAsync(this.url).then((client) => {
             client.setSecurity(security);
-            return client;
+            return client as ICreditInfo ;
         }).catch((err) => {
             throw new Error(err)
         });
