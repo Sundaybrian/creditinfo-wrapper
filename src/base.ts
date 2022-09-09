@@ -1,5 +1,5 @@
 import { IConfig, ICreditInfo } from "./interfaces";
-import soap  from "soap";
+import soap from "soap";
 
 
 export abstract class Base {
@@ -10,7 +10,7 @@ export abstract class Base {
 
     constructor(config: IConfig) {
 
-        this.url = config.endpoint ?? "https://wstest.creditinfo.co.tz/Multiconnector/MultiConnector.svc?singleWSDL";
+        this.url = config.endpoint ?? "https://wstest.creditinfo.co.tz/WsReport/v5.39/service.svc?singleWSDL";
         this.username = config.username;
         this.password = config.password;
 
@@ -20,13 +20,14 @@ export abstract class Base {
     protected invoke<T>(): Promise<ICreditInfo> {
         // can set default headers here
         const security = new soap.BasicAuthSecurity(this.username, this.password);
-        security.addHeaders({
+        const wsdl_headers = {
             connection: "keep-alive",
-        })
+        };
+        security.addHeaders(wsdl_headers)
 
-        return soap.createClientAsync(this.url).then((client) => {
+        return soap.createClientAsync(this.url, { wsdl_headers }).then((client) => {
             client.setSecurity(security);
-            return client as ICreditInfo ;
+            return client as ICreditInfo;
         }).catch((err) => {
             throw new Error(err)
         });

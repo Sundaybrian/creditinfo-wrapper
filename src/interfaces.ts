@@ -6,7 +6,6 @@ export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> =
         [K in Keys]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<Keys, K>>>
     }[Keys]
 
-type $method = "GET";
 type $decisionWorkflow = "NMB.TZA.Base"
 
 export type IConfig = {
@@ -14,9 +13,7 @@ export type IConfig = {
     password: string;
     endpoint: string;
     decisionworkflow?: $decisionWorkflow;
-    user?: string;
-    host?: string;
-    method?: $method;
+
 
 }
 
@@ -73,11 +70,16 @@ export type ISearchIndividualResult = {
 
 
 type SearchIndividualFn = (payload: Partial<ISearchInidividualInput>) =>
-    ISearchIndividualResult
+    Promise<ISearchIndividualResult>
 
 
-export interface ICreditInfo extends Client {
-    SearchIndividual: SearchIndividualFn
+export class ICreditInfo extends Client {
+    /** results of search query, base on either of   FullName?: string;
+    IdNumber?: string;
+    IdNumberType?: $IdNumberType;
+    PhoneNumber?: string; */
+    SearchIndividualAsync: SearchIndividualFn
+    
 }
 
 
