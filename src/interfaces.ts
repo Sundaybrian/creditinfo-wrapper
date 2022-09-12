@@ -48,7 +48,7 @@ type ISearchIndividualRecord = {
 
 
 type IndividualRecords = {
-    SearchIndividualRecord: Partial<ISearchIndividualRecord>[]
+    SearchIndividualRecord: Partial<ISearchIndividualRecord>[] | Partial<ISearchIndividualRecord>
 }
 
 
@@ -75,13 +75,13 @@ type SearchIndividualFn = (payload: Partial<ISearchInidividualInput>) =>
     Promise<ISearchResults>
 
 
-export class ICreditInfo extends Client {
+export interface ICreditInfo extends Client {
     /** results of search query, base on either of   FullName?: string;
     IdNumber?: string;
     IdNumberType?: $IdNumberType;
     PhoneNumber?: string; */
     SearchIndividualAsync: SearchIndividualFn
-    
+
 }
 
 

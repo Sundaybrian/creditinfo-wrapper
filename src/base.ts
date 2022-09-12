@@ -26,9 +26,9 @@ export abstract class Base {
         };
         security.addHeaders(wsdl_headers)
 
-        return soap.createClientAsync(this.url, { wsdl_headers }).then((client) => {
+        return soap.createClientAsync(this.url, { wsdl_headers }).then((client: ICreditInfo) => {
             client.setSecurity(security);
-            return client as ICreditInfo;
+            return client;
         }).catch((err) => {
             throw new Error(err)
         });
