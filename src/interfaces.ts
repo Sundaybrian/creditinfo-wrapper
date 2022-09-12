@@ -48,7 +48,7 @@ type ISearchIndividualRecord = {
 
 
 type IndividualRecords = {
-    SearchIndividualRecord: Partial<ISearchIndividualRecord[]>
+    SearchIndividualRecord: Partial<ISearchIndividualRecord>[]
 }
 
 
