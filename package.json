@@ -1,6 +1,6 @@
 {
   "name": "@debugger_supreme/creditinfo",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": " A wrapper for the credit info soap service",
   "main": "dist/index.js",
   "module": "dist/index.m.js",

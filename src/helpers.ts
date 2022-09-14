@@ -14,7 +14,7 @@ export const sanitizeISearchResults = function (results: ISearchResults) {
     let cloned = [...results];
     const first_results = results[0]
 
-    if (first_results.SearchIndividualResult.CreditinfoId == null) {
+    if (first_results.SearchIndividualResult.IndividualRecords == null) {
         return results;
     }
 
