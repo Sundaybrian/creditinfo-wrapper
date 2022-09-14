@@ -9,12 +9,16 @@ The Unofficial [Credit Info Tanzania](https://creditinfo.co.tz) API wrapper for 
 
 ## Installation
 
-Install via npm
+Install via npm (still in beta)
 
 ```bash
 npm i @debugger_supreme/credintinfo
 ```
+or install beta version
 
+```
+npm install --save @debugger_supreme/credintinfo@beta
+```
 ## Configuration
 
 ### Authentication
