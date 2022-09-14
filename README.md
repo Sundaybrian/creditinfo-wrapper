@@ -1,5 +1,5 @@
 <p align="center">
-<h1>Credit Info (TZ) API Wrapper for Nodejs</h1>
+<h1>Credit Info (TZ) API Wrapper for Nodejs (still in beta) </h1>
 </p>
 
 The Unofficial [Credit Info Tanzania](https://creditinfo.co.tz) API wrapper for Nodejs.
@@ -9,16 +9,18 @@ The Unofficial [Credit Info Tanzania](https://creditinfo.co.tz) API wrapper for 
 
 ## Installation
 
-Install via npm (still in beta)
+Install via npm (soon enough)
 
 ```bash
 npm i @debugger_supreme/credintinfo
 ```
-or install beta version
+
+or install a particular beta version
 
 ```
-npm install --save @debugger_supreme/credintinfo@beta
+npm install --save @debugger_supreme/creditinfo@0.0.1-beta.0
 ```
+
 ## Configuration
 
 ### Authentication
@@ -81,7 +83,6 @@ client
   .then(function (results) {
     console.log({ results: results[0] });
   });
-
 ```
 
 ### VehicleReport
@@ -98,8 +99,6 @@ client
 2. [ ] Driving License Report
 3. [ ] Vehicle Report
 4. [ ]Exception Handling
-
-
 
 This package is bootstrapped with the help of
 [express-api-starter](https://github.com/w3cj/express-api-starter).
